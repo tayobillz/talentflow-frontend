@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FAFAFA;
+}
+
+.interest{
+    width: 666px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.interest__title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #16A34A;
+    margin-bottom: 30px;
+}
+
+.interest__subtitle{
+    width: 539px;
+    height: 44.66px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #111827;
+}
+
+.interest__description{
+    width: 539px;
+    height: 44.66px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #6B7280;
+}
+
+
+.interest__topics{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0px;
+    gap: 12px;
+    width: 553px;
+    height: 263px;  
+    margin-top: 30px;
+}
+
+.interest__topic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: 2px solid #EDEDED;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #374151;
+    cursor: pointer;
+}
+
+
+
+.interest__counter{
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6B7280;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#count{
+    color: #16A34A;
+}
+
+.btn{
+    
+}
+
+
+
+
+
