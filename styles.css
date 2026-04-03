@@ -1,0 +1,22 @@
+ .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888; /* Text color */
+    margin: 20px 0;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd; /* Line color */
+  }
+
+  .divider:not(:empty)::before {
+    margin-right: 10px;
+  }
+
+  .divider:not(:empty)::after {
+    margin-left: 10px;
+  }
