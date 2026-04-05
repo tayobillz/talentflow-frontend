@@ -42,16 +42,20 @@
                 <div class="input-group">
                     <label for="input1">Email address</label>
                     <input type="text" id="input1" name="input1" placeholder="example@gmail.com">
+                    <span class="error" id="emailError"></span>
                 </div>
                 <div class="input-group">
                     <label for="input2">Password</label>
                     <input type="password" id="input2" name="input2" placeholder="••••••••">
+                    <span class="error" id="passwordError"></span>
                 </div>
                 <div class="input-group">
                     <label for="input3">Confirm Password</label>
                     <input type="password" id="input3" name="input3" placeholder="••••••••">
+                    <span class="error" id="confirmError"></span>
                 </div>
                 <button class="btn-continue">Continue</button>
+                <p class="success-msg" id="successMsg"></p>
                 <div class="divider">or continue with</div>
                 <div class="social-buttons">
                     <button class="btn-social"><img src="./images/Group.svg">Google</button>
@@ -63,4 +67,5 @@
     </div>
 
 </body>
+<script src="script.js"></script>
 </html>
