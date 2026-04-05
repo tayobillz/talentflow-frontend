@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left-panel">
+            <div class="card">
+
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot-active"></span>
+                </div>
+
+                <h2>Complete your profile</h2>
+                <p>Tell us about yourself to personalize your learning experience</p>
+
+                <div class="photo-upload">
+                    <img src="./images/upload photo.png" alt="Upload Photo">
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Current Role</label>
+                        <input type="text" id="role" name="role" placeholder="e.g., Senior Software Engineer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="github">GitHub Profile</label>
+                        <input type="url" id="github" name="github" placeholder="https://github.com/username">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="expLevel">Experience Level</label>
+                        <div class="slider-labels">
+                            <span>Beginner</span>
+                            <span>Intermediate</span>
+                            <span>Advanced</span>
+                        </div>
+                        <input type="range" id="expLevel" min="1" max="3" value="1">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="btn-back" onclick="window.location.href='index.html'">← Back</button>
+                        <button type="submit" class="btn-start">Get Started</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="right-panel">
+
+            <p class="preview-label">PROFILE PREVIEW</p>
+
+            <div class="preview-card">
+                <div class="preview-avatar"></div>
+                <h3  id="previewName">Jordan Davis</h3>
+                <p  id="previewRole">Frontend Developer Intern</p>
+                <p id="previewBio">
+                    Passionate about creating beautiful, user-friendly interfaces.
+                    Currently learning React and exploring modern frontend technologies.
+                    Excited to collaborate on real-world projects.
+                </p>
+
+                 <div class="stats">
+                <div class="stat-box">
+                    <h3>0</h3>
+                    <p>Courses</p>
+                </div>
+                <div class="stat-box">
+                    <h3>0</h3>
+                    <p>Projects</p>
+                </div>
+            </div>
+
+                <span class="badge" id="previewBadge">Beginner</span>
+            </div>
+
+           
+
+        </div>
+
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
