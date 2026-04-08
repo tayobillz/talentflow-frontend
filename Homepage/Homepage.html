@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <div class="app__container">
+        <div class="adminn">
+            <nav>
+                <div>
+                    <div class="admin__title">
+                        <img src="../icons/logo.jpeg" alt="Logo" class="logo">
+                        <h1 class="title">Talent Flow</h1>
+                    </div>
+                    <h2 class="subtitle">Menu</h2>
+                    <ul class="admin__nav">
+                        <li class="admin__nav-item nav__active">
+                            <img src="../icons/Icon.png" alt="dashboard icon">
+                            <a href="#" class="actiive">Dashboard</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-1.png" alt="">
+                            <a href="#">My Courses</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-2.png" alt="">
+                            <a href="#">Assignment</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Vector.png" alt="">
+                            <a href="#">Projects</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-3.png" alt="">
+                            <a href="#">Progress</a>
+                        </li>
+                    </ul> 
+                    
+                    <h2 class="help">Help & Settings</h2>
+
+                    <ul class="help__nav">
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-4.png" alt="dashboard icon">
+                            <a href="#" class="actiive">Settings</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-5.png" alt="">
+                            <a href="#">Help Center</a>
+                        </li>
+                    </ul>    
+                </div>
+                
+
+                <button class="logOut__btn">
+                    Log Out
+                    <img src="../icons/logout.png" alt="log out icon">
+                </button>
+
+
+
+            </nav>
+            <main>
+                <header>
+                    <div class="role_container">
+                        <div class="role">
+                            <button class="role__btn">
+                                <img src="../icons/admin.png" alt="" class="role__img">
+                                Administrator
+                            </button>
+                        </div>
+                        <div class="role__search">
+                            <input type="text">
+                        </div>
+                        <div class="avatarr">
+                            <img src="../icons/Vector-1.png" alt="notification" class="notification__icon">
+                            <img src="../icons/Ellipse 20.png" alt="avatar" class="avatar__icon">
+                        </div>
+                    </div>
+                </header>    
+                <section>
+                    <div class="banner">
+                        <div class="welcome">
+                            <div class="welcome__card">
+                                <h1 class="welcome__title">Welcome back, Alex! 👋</h1>
+                                <p class="welcome__subtitle">Ready to continue your learning journey? You have 3 courses in progress and 2 active projects.</p>
+                                
+                                <div class="btn">
+                                    <button class="browse">
+                                        <img src="../icons/book.png" alt="">
+                                        Browse Courses
+                                    </button>
+                                    <button class="start">
+                                        <img src="../icons/rocket.png" alt="">
+                                        Start Project
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="img__cont">
+                                <img src="../icons/cross.06_Frame001_Glass_color1_hollow.png" alt="" class="welcome__image">
+                            </div>
+                        </div>
+                        <div class="performance">
+                                <div class="performance__title">
+                                    <h2>Performance Overview</h2>
+                                </div>
+                                <div class="performance__bar">
+                                    <div class="bar__item">
+                                        <div class="bar__title">
+                                            <h3>Completion Rate</h3>
+                                            <p>87%</p>
+                                        </div>
+                                        <div class="progress__bar">
+                                            <div class="progress__fill" style="width: 87%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bar__item">
+                                        <div class="bar__title">
+                                            <h3>Learning Hours</h3>
+                                            <p>42%</p>
+                                        </div>
+                                        <div class="progress__bar">
+                                            <div class="progress__fill__learning" style="width: 42%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bar__item">
+                                        <div class="bar__title">
+                                            <h3>Project Completed</h3>
+                                            <p>8%</p>
+                                        </div>
+                                        <div class="progress__bar">
+                                            <div class="progress__fill__project" style="width: 8%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>       
+                </section>   
+                <section class="activity__section">
+                    <div>
+                        <div class="activity__section__title">
+                            <h3>Active Courses</h3>
+                            <p>View All</p>
+                        </div>
+                        <div class="activity__section__card">
+                            <div class="card__item">
+                                <div class="card__content">
+                                    <div style="display: flex; gap: 15px; align-items: center;">
+                                        <img src="../icons/ui.png" alt="" style="width: 30px;">
+                                        <div>
+                                            <h4 class="uiux__title">UI/UX Design Fundamentals</h4>
+                                            <p class="uiux__subtitle">12 of 20 lessons completed</p>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; display: flex; align-items: center; justify-content: space-between;">
+                                        <h3>Progress</h3>
+                                        <p class="uiux__progress">60%</p>
+                                    </div>
+                                    <div class="progress__bar">
+                                        <div class="progress__fill" style="width: 60%;"></div>
+                                    </div>
+                                     
+                                </div>   
+                            </div>
+                            <div class="card__item">
+                                <div class="card__content">
+                                    <div style="display: flex; gap: 15px; align-items: center;">
+                                        <img src="../icons/ui.png" alt="" style="width: 30px;">
+                                        <div>
+                                            <h4 class="uiux__title">UI/UX Design Fundamentals</h4>
+                                            <p class="uiux__subtitle">12 of 20 lessons completed</p>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; display: flex; align-items: center; justify-content: space-between;">
+                                        <h3>Progress</h3>
+                                        <p class="uiux__progress">60%</p>
+                                    </div>
+                                    <div class="progress__bar">
+                                        <div class="progress__fill" style="width: 60%;"></div>
+                                    </div>
+                                     
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="activity__section__title">
+                            <h3>Ongoing Projects</h3>
+                            <p>View All</p>
+                        </div>
+                        <div class="activity__section__card">
+                            <div class="card__item">
+                                <div class="card__content">
+                                    <div style="display: flex; gap: 15px; align-items: center;">
+                                        
+                                        <div>
+                                            <h4 class="uiux__title">E-commerce Redesign</h4>
+                                            <div style="display: flex; gap: 5px; align-items: center; margin-top: 10px;">
+                                                <img src="../icons/calender.png" alt="" style="width: 15px;">
+                                                <p class="uiux__subtitle" style="font-size: 15px;">Due in 5 days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="members">3 members</p>
+                                    <button class="progress__btn">In Progress</button>
+                                     
+                                </div>   
+                            </div>
+                            <div class="card__item">
+                                <div class="card__content">
+                                    <div style="display: flex; gap: 15px; align-items: center;">
+                                        
+                                        <div>
+                                            <h4 class="uiux__title">E-commerce Redesign</h4>
+                                            <div style="display: flex; gap: 5px; align-items: center; margin-top: 10px;">
+                                                <img src="../icons/calender.png" alt="" style="width: 15px;">
+                                                <p class="uiux__subtitle" style="font-size: 15px;">Due in 5 days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="members">3 members</p>
+                                    <button class="progress__btn">In Progress</button>
+                                     
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="activity__section__title">
+                            <h3>Recent Activity</h3>
+                            <p>View All</p>
+                        </div>
+                        <div class="recent__activity">
+                            <div class="recent_card">
+                                <div style="display: flex; gap: 15px; align-items: center;">
+                                    <img src="../icons/profile__pic.png" alt="" style="width: 50px;">
+                                    <p> <b>Sarah Chen</b> commented on your project submission </p>
+                                    
+                                </div>
+                                <p style="margin-left: 65px;">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="recent__activity">
+                            <div class="recent_card">
+                                <div style="display: flex; gap: 15px; align-items: center;">
+                                    <img src="../icons/profile__pic.png" alt="" style="width: 50px;">
+                                    <p> <b>Sarah Chen</b> commented on your project submission </p>
+                                    
+                                </div>
+                                <p style="margin-left: 65px;">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="recent__activity">
+                            <div class="recent_card">
+                                <div style="display: flex; gap: 15px; align-items: center;">
+                                    <img src="../icons/profile__pic.png" alt="" style="width: 50px;">
+                                    <p> <b>Sarah Chen</b> commented on your project submission </p>
+                                    
+                                </div>
+                                <p style="margin-left: 65px;">2 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="activity__section__title">
+                            <h3>Upcoming Sessions</h3>
+
+                        </div>
+                        <div class="session__cards">
+                            <div class="session__card">
+                                <p class="session__time">Today, 2:00 PM</p>
+                                <p class="session__title">Design Systems Workshop</p>
+                                <p class="session__type">Live Session</p>   
+                            </div>
+                            <div class="session__card blue__session">
+                                <p class="session__time blue">Today, 2:00 PM</p>
+                                <p class="session__title">Design Systems Workshop</p>
+                                <p class="session__type">Live Session</p>   
+                            </div>
+                            <div class="session__card orange__session">
+                                <p class="session__time orange">Today, 2:00 PM</p>
+                                <p class="session__title">Design Systems Workshop</p>
+                                <p class="session__type">Live Session</p>   
+                            </div>
+                            <div class="session__card purple__session">
+                                <p class="session__time purple">Today, 2:00 PM</p>
+                                <p class="session__title">Design Systems Workshop</p>
+                                <p class="session__type">Live Session</p>   
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                    
+                </section>
+            </main>
+        </div>
+    </div>
+
+<script src="Homepage.js"></script>   
+</body>
+</html>
