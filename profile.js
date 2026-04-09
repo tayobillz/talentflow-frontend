@@ -51,5 +51,7 @@ startBtn.addEventListener("click", function(){
     linkedin: document.getElementById("linkedin").value,
     github: document.getElementById("github").value,
     level: slider[expLevel.value - 1]
-}
+} 
+
+console.log(profile)
 })
