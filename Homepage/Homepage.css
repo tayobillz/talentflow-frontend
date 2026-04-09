@@ -585,3 +585,14 @@ section{
 .purple{
     color: #8B5CF6;
 }
+
+.visuals{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.visuals img{
+    width: 300px;
+}
