@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="app__container">
+        <div class="adminn">
+            <nav>
+                <div>
+                    <div class="admin__title">
+                        <img src="../icons/logo.jpeg" alt="Logo" class="logo">
+                        <h1 class="title">Talent Flow</h1>
+                    </div>
+                    <h2 class="subtitle">Menu</h2>
+                    <ul class="admin__nav">
+                        <li class="admin__nav-item nav__active">
+                            <img src="../icons/Icon.png" alt="dashboard icon">
+                            <a href="#" class="actiive">Dashboard</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-1.png" alt="">
+                            <a href="#">My Courses</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-2.png" alt="">
+                            <a href="#">Assignment</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Vector.png" alt="">
+                            <a href="#">Projects</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-3.png" alt="">
+                            <a href="#">Progress</a>
+                        </li>
+                    </ul> 
+                    
+                    <h2 class="help">Help & Settings</h2>
+
+                    <ul class="help__nav">
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-4.png" alt="dashboard icon">
+                            <a href="#" class="actiive">Settings</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <img src="../icons/Icon-5.png" alt="">
+                            <a href="#">Help Center</a>
+                        </li>
+                    </ul>    
+                </div>
+                
+
+                <button class="logOut__btn">
+                    Log Out
+                    <img src="../icons/logout.png" alt="log out icon">
+                </button>
+
+
+
+            </nav>
+            <main>
+                <header>
+                    <div class="role_container">
+                        <div class="role">
+                            <button class="role__btn">
+                                <img src="../icons/admin.png" alt="" class="role__img">
+                                Administrator
+                            </button>
+                        </div>
+                        <div class="role__search">
+                            <input type="text">
+                        </div>
+                        <div class="avatarr">
+                            <img src="../icons/Vector-1.png" alt="notification" class="notification__icon">
+                            <img src="../icons/Ellipse 20.png" alt="avatar" class="avatar__icon">
+                        </div>
+                    </div>
+                </header>    
+                <section>
+                    <div class="section__header">
+                        <div class="section__subtitle">
+                            <h1>Admin Dashboard</h1>
+                            <p>Monitor system activity, manage users, and track platform performance</p>
+                        </div>
+                        <div class="cards">
+                            <div class="card">
+                                <div class="total__users">
+                                    <p>Total Users</p>
+                                    <div class="total__users__background">
+                                        <img src="../icons/Vector-2.png" alt="group icon">
+                                    </div>
+                                    
+                                </div>
+                                <div class="total__users__count">
+                                    <h2>2,847</h2>
+                                </div>
+                                
+                                <div class="total__users__text">
+                                    <img src="../icons/Vector-3.png" alt="increase icon">
+                                    <p> 12.5% from last month</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="total__users">
+                                    <p>Active Courses</p>
+                                    <div class="active__courses__background">
+                                        <img src="../icons/Vector-4.png" alt="Book icon">
+                                    </div>
+                                    
+                                </div>
+                                <div class="total__users__count">
+                                    <h2>156</h2>
+                                </div>
+                                
+                                <div class="total__users__text">
+                                    <img src="../icons/Vector-3.png" alt="increase icon">
+                                    <p> 8 new this week</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="total__users">
+                                    <p>Ongoing Projects</p>
+                                    <div class="ongoing__projects__background">
+                                        <img src="../icons/Vector-5.png" alt="group icon">
+                                    </div>
+                                    
+                                </div>
+                                <div class="total__users__count">
+                                    <h2>423</h2>
+                                </div>
+                                
+                                <div class="total__users__text">
+                                    <img src="../icons/Vector-3.png" alt="increase icon">
+                                    <p> 34 started today</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="total__users">
+                                    <p>System Health</p>
+                                    <div class="system__health__background">
+                                        <img src="../icons/Vector-6.png" alt="group icon">
+                                    </div>
+                                    
+                                </div>
+                                <div class="total__users__count">
+                                    <h2>99.8%</h2>
+                                </div>
+                                
+                                <div class="total__users__text">
+                                    <img src="../icons/Vector-3.png" alt="increase icon">
+                                    <p> All systems operational</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="user__activity">
+                            <div class="userr">
+                                <h2>User Activity</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name <img src="../icons/dropdown.png" alt=""></th>
+                                            <th>Role <img src="../icons/dropdown.png" alt=""></th>
+                                            <th>Last Active <img src="../icons/dropdown.png" alt=""></th>
+                                            <th>Courses <img src="../icons/dropdown.png" alt=""></th>
+                                            <th>Projects <img src="../icons/dropdown.png" alt=""></th>
+                                            <th>Actions <img src="../icons/dropdown.png" alt=""></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="user">
+                                                <div class="avatar">SJ</div>
+                                                <div>
+                                                    <p class="name">Sarah Johnson</p>
+                                                    <p class="email">sarah.j@talentflow.com</p>
+                                                </div>
+                                            </td>
+
+                                            <td><span class="badge intern">Intern</span></td>
+                                            <td>2 hours ago</td>
+                                            <td>8</td>
+                                            <td>3</td>
+
+                                            <td class="actions">
+                                                <button><img src="../icons/Vector-8.png" alt=""></button>
+                                                <button><img src="../icons/Vector-9.png" alt=""></button>
+                                                <button><img src="../icons/Vector-10.png" alt=""></button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="user">
+                                            <div class="avatar">MC</div>
+                                            <div>
+                                                <p class="name">Michael Chen</p>
+                                                <p class="email">m.chen@talentflow.com</p>
+                                            </div>
+                                            </td>
+
+                                            <td><span class="badge mentor">Mentor</span></td>
+                                            <td>12 hours ago</td>
+                                            <td>4</td>
+                                            <td>2</td>
+
+                                            <td class="actions">
+                                                <button><img src="../icons/Vector-8.png" alt=""></button>
+                                                <button><img src="../icons/Vector-9.png" alt=""></button>
+                                                <button><img src="../icons/Vector-10.png" alt=""></button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="user">
+                                            <div class="avatar">EP</div>
+                                            <div>
+                                                <p class="name">Emma Patel</p>
+                                                <p class="email">e.patel@talentflow.com</p>
+                                            </div>
+                                            </td>
+
+                                            <td><span class="badge admin">Admin</span></td>
+                                            <td>12 hours ago</td>
+                                            <td>4</td>
+                                            <td>2</td>
+
+                                            <td class="actions">
+                                                <button><img src="../icons/Vector-8.png" alt=""></button>
+                                                <button><img src="../icons/Vector-9.png" alt=""></button>
+                                                <button><img src="../icons/Vector-10.png" alt=""></button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="user">
+                                            <div class="avatar">JD</div>
+                                            <div>
+                                                <p class="name">James Davis</p>
+                                                <p class="email">j.davis@talentflow.com</p>
+                                            </div>
+                                            </td>
+
+                                            <td><span class="badge mentor">Mentor</span></td>
+                                            <td>12 hours ago</td>
+                                            <td>4</td>
+                                            <td>2</td>
+
+                                            <td class="actions">
+                                                <button><img src="../icons/Vector-8.png" alt=""></button>
+                                                <button><img src="../icons/Vector-9.png" alt=""></button>
+                                                <button><img src="../icons/Vector-10.png" alt=""></button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="user">
+                                            <div class="avatar">LM</div>
+                                            <div>
+                                                <p class="name">Lisa Martinez</p>
+                                                <p class="email">l.martinez@talentflow.com</p>
+                                            </div>
+                                            </td>
+
+                                            <td><span class="badge intern">Intern</span></td>
+                                            <td>12 hours ago</td>
+                                            <td>4</td>
+                                            <td>2</td>
+
+                                            <td class="actions">
+                                                <button><img src="../icons/Vector-8.png" alt=""></button>
+                                                <button><img src="../icons/Vector-9.png" alt=""></button>
+                                                <button><img src="../icons/Vector-10.png" alt=""></button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="user">
+                                            <div class="avatar">AJ</div>
+                                            <div>
+                                                <p class="name">Atokolo John</p>
+                                                <p class="email">a.john@talentflow.com</p>
+                                            </div>
+                                            </td>
+
+                                            <td><span class="badge intern">Intern</span></td>
+                                            <td>12 hours ago</td>
+                                            <td>4</td>
+                                            <td>2</td>
+
+                                            <td class="actions">
+                                                <button><img src="../icons/Vector-8.png" alt=""></button>
+                                                <button><img src="../icons/Vector-9.png" alt=""></button>
+                                                <button><img src="../icons/Vector-10.png" alt=""></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>                                
+                            </div>
+
+                            <div class="recent__actions">
+                                <h2 class="recent__title">Recent Activities</h2>
+                                <div class="recent__content">
+                                    <div class="activity">
+                                        <img src="../icons/Vector-11.png" alt="">
+                                        <div>
+                                            <p class="activity__text">Sarah Johnson</p>
+                                            <p class="activity__subtext">Enrolled in "Intro to Python"</p>
+                                            <p class="activity__date">1 hour ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity">
+                                        <img src="../icons/Vector-12.png" alt="">
+                                        <div>
+                                            <p class="activity__text">Micheal Chen</p>
+                                            <p class="activity__subtext">Enrolled in "Advanced React Patterns"</p>
+                                            <p class="activity__date">4 hour ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity">
+                                        <img src="../icons/Vector-13.png" alt="">
+                                        <div>
+                                            <p class="activity__text"> Emma Patel</p>
+                                            <p class="activity__subtext">completed "UI/UX  Fundamentals"</p>
+                                            <p class="activity__date">5 minutes ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity">
+                                        <img src="../icons/Vector-14.png" alt="">
+                                        <div>
+                                            <p class="activity__text"> Lisa Martinez</p>
+                                            <p class="activity__subtext"> Approved submission  for "Design System Project"</p>
+                                            <p class="activity__date">3 hours ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity">
+                                        <img src="../icons/Vector-15.png" alt="">
+                                        <div>
+                                            <p class="activity__text">James Davis</p>
+                                            <p class="activity__subtext">Commented on "API  Development Workshop"</p>
+                                            <p class="activity__date">3 hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>   
+            </main>
+        </div>
+    </div>
+
+<script src="Admin.js"></script>   
+</body>
+</html>
