@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Talent Flow – Chat</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="chat.css"/>
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+<button class="icon-btn" id="backBtn" onclick="showPanel('sidebar')" style="display:none;">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+<div class="topbar__logo">
+<img src="assets/TF-logo.jpg" alt="Talent Flow" class="topbar__logo-img"/>
+<span id="topbarTitle">TalentFlow</span>
+</div>
+<div class="topbar__actions">
+<button class="icon-btn" id="infoBtn" onclick="showPanel('info')" style="display:none;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+</button>
+<div class="av-you">A</div>
+</div>
+</header>
+
+<div class="app-shell">
+
+<!-- PANEL 1: SIDEBAR -->
+<aside class="panel panel--sidebar active" id="panelSidebar">
+
+<!-- Logo row -->
+<div class="sidebar-logo-row">
+    <div class="sidebar-logo">
+    <img src="assets/TF-logo.jpg" alt="TF" class="sidebar-logo-img"/>
+    <span>TalentFlow</span>
+    </div>
+</div>
+
+<!-- Search -->
+<div class="sidebar-search">
+    <input type="text" placeholder="Search..." class="search-input"/>
+</div>
+
+<!-- Compose -->
+<div class="sidebar-compose">
+    <button class="btn-compose" onclick="alert('New message')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    Compose
+    </button>
+</div>
+
+<!-- Direct Messages -->
+<div class="contact-section">
+    <div class="section-header" onclick="toggleSection(this)">
+    <span>Direct Messages</span>
+    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <ul class="contact-list">
+    <li class="contact-item" onclick="openChat('Sarah Martinez', 'SM', '#7C3AED', '#EDE9FE')">
+        <div class="contact-avatar" style="background:#EDE9FE;color:#7C3AED;">SM</div>
+        <div class="contact-info">
+        <div class="contact-name">Sarah Martinez</div>
+        <div class="contact-preview">Sounds good! Let's sync later</div>
+        </div>
+        <span class="badge">2</span>
+    </li>
+    <li class="contact-item active" onclick="openChat('Jordan Chen', 'JC', '#0369A1', '#E0F2FE')">
+        <div class="contact-avatar" style="background:#E0F2FE;color:#0369A1;">JC</div>
+        <div class="contact-info">
+        <div class="contact-name">Jordan Chen</div>
+        <div class="contact-preview">Thanks for the feedback!</div>
+        </div>
+        <span class="online-dot"></span>
+    </li>
+    <li class="contact-item" onclick="openChat('Alex Patel', 'AP', '#B45309', '#FEF3C7')">
+        <div class="contact-avatar" style="background:#FEF3C7;color:#B45309;">AP</div>
+        <div class="contact-info">
+        <div class="contact-name">Alex Patel</div>
+        <div class="contact-preview">Just pushed the changes</div>
+        </div>
+    </li>
+    <li class="contact-item" onclick="openChat('Maya Johnson', 'MJ', '#BE185D', '#FCE7F3')">
+        <div class="contact-avatar" style="background:#FCE7F3;color:#BE185D;">MJ</div>
+        <div class="contact-info">
+        <div class="contact-name">Maya Johnson</div>
+        <div class="contact-preview">Great work on the presentation</div>
+        </div>
+    </li>
+    </ul>
+</div>
+
+<!-- Team Channels -->
+<div class="contact-section">
+    <div class="section-header" onclick="toggleSection(this)">
+    <span>Team Channels</span>
+    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <ul class="contact-list">
+    <li class="contact-item channel" onclick="openChat('#general', '#', '#22C55E', '#DCFCE7')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">general</div></div>
+        <span class="badge">2</span>
+    </li>
+    <li class="contact-item channel" onclick="openChat('#design', '#', '#BE185D', '#FCE7F3')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">design</div></div>
+        <span class="badge">2</span>
+    </li>
+    <li class="contact-item channel" onclick="openChat('#frontend', '#', '#B45309', '#FEF3C7')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">frontend</div></div>
+        <span class="badge">2</span>
+    </li>
+    <li class="contact-item channel" onclick="openChat('#backend', '#', '#0369A1', '#E0F2FE')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">backend</div></div>
+        <span class="badge badge--green">12</span>
+    </li>
+    <li class="contact-item channel" onclick="openChat('#product', '#', '#6366F1', '#EEF2FF')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">product</div></div>
+    </li>
+    </ul>
+</div>
+
+<!-- Projects -->
+<div class="contact-section">
+    <div class="section-header" onclick="toggleSection(this)">
+    <span>Projects</span>
+    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <ul class="contact-list">
+    <li class="contact-item channel" onclick="openChat('#ecommerce-redesign', '#', '#22C55E', '#DCFCE7')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">ecommerce-redesign</div></div>
+    </li>
+    <li class="contact-item channel" onclick="openChat('#mobile-app-dev', '#', '#7C3AED', '#EDE9FE')">
+        <div class="channel-hash">#</div>
+        <div class="contact-info"><div class="contact-name">mobile-app-dev</div></div>
+        <span class="badge">7</span>
+    </li>
+    </ul>
+</div>
+
+</aside>
+
+<!-- PANEL 2: CHAT -->
+<section class="panel panel--chat" id="panelChat">
+
+<div class="chat-header">
+    <div class="chat-header__left">
+    <div class="contact-avatar sm" style="background:#E0F2FE;color:#0369A1;" id="chatAvatar">JC</div>
+    <div>
+        <div class="chat-header__name" id="chatName">Jordan Chen</div>
+        <div class="chat-header__status">
+        <span class="online-dot"></span> Active now
+        </div>
+    </div>
+    </div>
+    <div class="chat-header__actions">
+    <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+    <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.86-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16.92z"/></svg></button>
+    <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></button>
+    <button class="icon-btn pin-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="17" x2="12" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg></button>
+    <button class="icon-btn" onclick="toggleInfoPanel()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+    </div>
+</div>
+
+<div class="messages-area" id="messagesArea">
+
+    <div class="message message--them">
+    <div class="msg-avatar" style="background:#E0F2FE;color:#0369A1;">JC</div>
+    <div class="msg-content">
+        <div class="msg-meta"><span class="msg-name">Jordan Chen</span><span class="msg-time">9:42 AM</span></div>
+        <div class="msg-bubble them">Hey! I just reviewed your latest designs for the dashboard. Really impressed with the progress tracking section. The visual hierarchy is spot on.</div>
+        <div class="msg-reactions"><span class="reaction">👍 1</span></div>
+    </div>
+    </div>
+
+    <div class="message message--me">
+    <div class="msg-content">
+        <div class="msg-meta me"><span class="msg-time">9:45 AM</span><span class="msg-name">You</span></div>
+        <div class="msg-bubble me">Thanks! I spent a lot of time getting the data visualization right. Do you think the green color scheme works well for the progress indicators?</div>
+    </div>
+    <div class="msg-avatar you-avatar">You</div>
+    </div>
+
+    <div class="message message--them">
+    <div class="msg-avatar" style="background:#E0F2FE;color:#0369A1;">JC</div>
+    <div class="msg-content">
+        <div class="msg-meta"><span class="msg-name">Jordan Chen</span><span class="msg-time">9:47 AM</span></div>
+        <div class="msg-bubble them">Absolutely! The green (#16A34A) is perfect for positive progress indicators. It's also accessible and stands out well against the neutral backgrounds you're using.</div>
+        <div class="msg-bubble them" style="margin-top:6px;">One suggestion though — have you considered adding tooltips to the progress bars? It would help users understand their exact completion percentage on hover.</div>
+        <div class="msg-reactions"><span class="reaction">👍 2</span></div>
+        <div class="msg-replies" onclick="alert('Thread view')">↩ 2 replies</div>
+    </div>
+    </div>
+
+</div>
+
+<div class="message-input-area">
+    <button class="icon-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+    </button>
+    <input type="text" class="msg-input" placeholder="Type a message..." id="msgInput"/>
+    <button class="icon-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+    </button>
+    <button class="send-btn" onclick="sendMessage()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+</div>
+
+</section>
+
+<!-- PANEL 3: INFO (always visible on desktop) -->
+<aside class="panel panel--info" id="panelInfo">
+
+<div class="info-header">
+    <button class="icon-btn close-info-btn" onclick="closeInfo()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+</div>
+
+<div class="info-body">
+
+    <div class="info-section">
+    <div class="info-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        About
+    </div>
+    <p class="info-text">Direct message conversation with Jordan Chen. Frontend developer and UI/UX mentor working on the TalentFlow platform.</p>
+    </div>
+
+    <div class="info-section">
+    <div class="info-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Pinned Messages
+    </div>
+    <div class="pinned-item">
+        <div class="pinned-name">Jordan Chen</div>
+        <div class="pinned-text">Design review meeting - Tomorrow 2 PM</div>
+    </div>
+    <div class="pinned-item">
+        <div class="pinned-name">You</div>
+        <div class="pinned-text">Figma link: https://figma.com/dashboard-design</div>
+    </div>
+    </div>
+
+    <div class="info-section">
+    <div class="info-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        Shared Files
+    </div>
+    <div class="file-item">
+        <div class="file-icon">📄</div>
+        <div class="file-info">
+        <div class="file-name">Design_Specs_v2.pdf</div>
+        <div class="file-size">2.4 MB</div>
+        </div>
+    </div>
+    <div class="file-item">
+        <div class="file-icon">📄</div>
+        <div class="file-info">
+        <div class="file-name">Design_Specs_v2.pdf</div>
+        <div class="file-size">2.4 MB</div>
+        </div>
+    </div>
+    </div>
+
+    <div class="info-section">
+    <div class="info-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Conversation Members
+    </div>
+    <div class="member-item">
+        <div class="contact-avatar sm" style="background:#E0F2FE;color:#0369A1;">JC</div>
+        <div class="member-info">
+        <div class="member-name">Jordan Chen</div>
+        <div class="member-role">Frontend Developer</div>
+        </div>
+        <span class="online-dot"></span>
+    </div>
+    <div class="member-item">
+        <div class="contact-avatar sm you-sq">You</div>
+        <div class="member-info">
+        <div class="member-name">You</div>
+        <div class="member-role">UI/UX Designer</div>
+        </div>
+        <span class="online-dot"></span>
+    </div>
+    </div>
+
+</div>
+</aside>
+
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>

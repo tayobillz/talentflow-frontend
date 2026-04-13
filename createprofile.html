@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Talent Flow – Create Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="createprofile.css"/>
+</head>
+<body>
+
+<header class="topbar">
+<div class="topbar__logo">
+<img src="assets/TF-logo.jpg" alt="Talent Flow" class="topbar__logo-img"/>
+<span>Talent Flow</span>
+</div>
+</header>
+
+<main class="page">
+<div class="card">
+
+<div class="steps">
+    <span class="step done"></span>
+    <span class="step done"></span>
+    <span class="step active"></span>
+</div>
+
+<h1 class="card__title">Complete your profile</h1>
+<p class="card__subtitle">Tell us about yourself to personalize your learning experience</p>
+
+<div class="two-col">
+
+    <!-- FORM -->
+    <div class="form-col">
+
+    <div class="photo-upload" id="photoUpload" onclick="document.getElementById('photoInput').click()">
+        <img src="" alt="" class="photo-preview" id="photoPreview"/>
+        <div class="photo-placeholder" id="photoPlaceholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <span>Upload photo</span>
+        </div>
+        <input type="file" id="photoInput" accept="image/*" style="display:none;" onchange="handlePhoto(event)"/>
+    </div>
+
+    <div class="field">
+        <label class="field__label" for="bio">Bio</label>
+        <textarea class="field__input field__textarea" id="bio" rows="4"
+        placeholder="Write a short bio about yourself..."
+        oninput="updatePreview()"></textarea>
+    </div>
+
+    <div class="field">
+        <label class="field__label" for="role">Current Role</label>
+        <input type="text" class="field__input" id="role"
+        placeholder="e.g. Frontend Developer Intern"
+        oninput="updatePreview()"/>
+    </div>
+
+    <div class="field">
+        <label class="field__label" for="linkedin">LinkedIn Profile</label>
+        <input type="url" class="field__input" id="linkedin"
+        placeholder="https://linkedin.com/in/yourname"/>
+    </div>
+
+    <div class="field">
+        <label class="field__label" for="github">GitHub Profile</label>
+        <input type="url" class="field__input" id="github"
+        placeholder="https://github.com/yourname"/>
+    </div>
+
+    <div class="field">
+        <label class="field__label">Experience Level</label>
+        <div class="slider-labels">
+        <span>Beginner</span>
+        <span>Intermediate</span>
+        <span>Advanced</span>
+        </div>
+        <input type="range" class="exp-slider" id="expSlider"
+        min="0" max="2" step="1" value="0"
+        oninput="updateExp(this.value)"/>
+    </div>
+
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-col">
+    <p class="preview-label">Profile Preview</p>
+
+    <div class="preview-card">
+        <div class="preview-avatar" id="previewAvatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+
+        <div class="preview-name" id="previewName">Jordan Davis</div>
+        <div class="preview-role" id="previewRole">Frontend Developer Intern</div>
+        <div class="preview-bio" id="previewBio">Passionate about creating beautiful, user-friendly interfaces. Currently learning React and exploring modern frontend technologies. Excited to collaborate on real-world projects.</div>
+
+        <div class="preview-stats">
+        <div class="preview-stat">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Courses</span>
+        </div>
+        <div class="preview-stat">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Projects</span>
+        </div>
+        </div>
+
+        <div class="preview-badge" id="previewBadge">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Beginner
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<div class="card__actions">
+    <button class="btn-back" onclick="history.back()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    Back
+    </button>
+    <button class="btn-next" onclick="handleSubmit()">
+    Get Started
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+</div>
+
+</div>
+</main>
+
+<script src="createprofile.js"></script>
+</body>
+</html>
