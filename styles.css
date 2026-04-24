@@ -216,3 +216,58 @@
     text-align: center;
     font-weight: 600;
 }
+
+
+
+.mobile-logo {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
+        background: #f3f4f6;
+    }
+
+    .container {
+        display: block;
+        height: auto;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        border-radius: 14px;
+        padding: 36px 24px 28px;
+        box-shadow: 0 4px 24px rgba(13, 74, 48, 0.09);
+    }
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 32px;
+    }
+
+    .mobile-logo .logo-box {
+        width: 36px;
+        height: 36px;
+        background-color: grey;
+        border-radius: 6px;
+    }
+
+    .mobile-logo span {
+        font-family: "Syne", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #0d1a12;
+    }
+}
