@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TalentFlow Onboarding 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="onboarding3.css" />
+  
+</head>
+<body>
+
+  <div class="page">
+    <div class="container">
+
+      <div class="progress-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <h1 class="heading">What brings you to TalentFlow?</h1>
+
+      <div class="cards-row">
+
+        <div class="card" data-role="intern">
+          <input type="radio" name="role" id="intern" value="intern" />
+          <label for="intern">
+            <div class="card-icon">
+              <img src="./images/boarding3.svg" alt="Intern" width="32" height="32" />
+            </div>
+            <h3>Intern</h3>
+            <p>Learn skills, work on projects</p>
+          </label>
+        </div>
+
+        <div class="card" data-role="mentor">
+          <input type="radio" name="role" id="mentor" value="mentor" />
+          <label for="mentor">
+            <div class="card-icon">
+              <img src="./images/boarding3 (2).svg" alt="Mentor" width="32" height="32" />
+            </div>
+            <h3>Mentor</h3>
+            <p>Guide and teach others</p>
+          </label>
+        </div>
+
+        <div class="card" data-role="admin">
+          <input type="radio" name="role" id="admin" value="admin" />
+          <label for="admin">
+            <div class="card-icon">
+              <img src="./images/boarding3 (3).svg" alt="Admin" width="32" height="32" />
+            </div>
+            <h3>Admin</h3>
+            <p>Manage organization</p>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="button-row">
+        <button class="btn-skip">Skip</button>
+<button class="btn-continue" disabled onclick="window.location.href='./onboarding4.html'">Continue</button>      </div>
+
+    </div>
+  </div>
+
+  <script src="onboarding3.js"></script>
+</body>
+</html>
