@@ -1,0 +1,269 @@
+/* ============================================
+   TALENTFLOW GLOBAL STYLESHEET
+   Shared styles, fonts, variables, and resets
+   ============================================ */
+
+/* GOOGLE FONTS - IMPORT ONCE */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ============================================
+   CSS VARIABLES / DESIGN TOKENS
+   ============================================ */
+
+:root {
+  /* COLORS */
+  --green: #22C55E;
+  --green-dark: #16A34A;
+  --green-light: #DCFCE7;
+  --green-primary: #0A4921;
+  
+  --bg: #F4F6F8;
+  --bg-light: #F8F9FA;
+  --bg-form: #f3f4f6;
+  
+  --card: #FFFFFF;
+  --text: #111827;
+  --text-dark: #0F172A;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --border-light: #B8C1CC;
+  
+  --error: #DC2626;
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --info: #0EA5E9;
+  
+  /* TYPOGRAPHY */
+  --font-syne: 'Syne', sans-serif;
+  --font-dm: 'DM Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  
+  /* SPACING */
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-full: 99px;
+  
+  /* SHADOWS */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-syne);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--green-dark);
+}
+
+/* ============================================
+   BUTTONS - REUSABLE
+   ============================================ */
+
+.btn,
+button {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--green-dark);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg);
+}
+
+.btn-small {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+input,
+textarea,
+select {
+  font-family: var(--font-dm);
+  font-size: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background-color: var(--bg-form);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--green);
+}
+
+label {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.error {
+  color: var(--error);
+  font-family: var(--font-poppins);
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.success-msg {
+  color: var(--success);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 4px; }
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: 16px; }
+.mt-4 { margin-top: 24px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 4px; }
+.mb-2 { margin-bottom: 8px; }
+.mb-3 { margin-bottom: 16px; }
+.mb-4 { margin-bottom: 24px; }
+
+.px-1 { padding-left: 8px; padding-right: 8px; }
+.px-2 { padding-left: 16px; padding-right: 16px; }
+.px-3 { padding-left: 24px; padding-right: 24px; }
+
+.py-1 { padding-top: 8px; padding-bottom: 8px; }
+.py-2 { padding-top: 16px; padding-bottom: 16px; }
+.py-3 { padding-top: 24px; padding-bottom: 24px; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
